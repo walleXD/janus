@@ -1,8 +1,15 @@
 {
   "name": "janus",
   "version": "0.1.0",
-  "description": "",
+  "description": "A very simple CLI implementation of game of life",
+  "bin": {
+    "janus": "bin/index.js"
+  },
   "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
   "scripts": {
     "dev:run": "nodemon --watch src --ext ts,tsx --exec node --require ts-node/register --require tsconfig-paths/register --require dotenv/config src/index.ts",
     "dev": "concurrently npm:typecheck:watch npm:dev:run --raw",
@@ -10,7 +17,7 @@
     "prebuild": "rm -rf dist/",
     "build": "tsc -b",
     "start": "node --require tsconfig-paths/register dist/index.js",
-    "lint": "eslint . --ext .js,.ts,.tsx,.ate --quiet",
+    "lint": "eslint . --ext .js,.ts,.tsx --quiet",
     "lint:fix": "npm run lint:js -- --fix",
     "check:pkgs": "npx syncpack",
     "typecheck": "tsc --noEmit",
@@ -20,7 +27,12 @@
     "hook:pre-commit": "lint-staged",
     "hook:commit-msg": "commitlint --edit $1"
   },
-  "keywords": [],
+  "keywords": [
+    "game",
+    "life",
+    "cli",
+    "cli-game-of-life"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
