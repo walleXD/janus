@@ -28,3 +28,30 @@ export const createBoadCreator =
             })
         )
     }
+
+export const getVerticalNeighborCount = (
+  board: Board,
+  x: number,
+  y: number,
+  center = false
+): number => {
+  return (
+    (y < board.length - 1 ? Number(board[y + 1][x].alive) : 0) +
+    (y > 0 ? Number(board[y - 1][x].alive) : 0) +
+    (center ? Number(board[y][x].alive) : 0)
+  )
+}
+
+export const getNeighborCount = (
+  board: Board,
+  x: number,
+  y: number
+): number => {
+  return (
+    getVerticalNeighborCount(board, x, y) +
+    (x > 0 ? getVerticalNeighborCount(board, x - 1, y, true) : 0) +
+    (x < board[0].length - 1
+      ? getVerticalNeighborCount(board, x + 1, y, true)
+      : 0)
+  )
+}

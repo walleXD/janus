@@ -1,10 +1,15 @@
-import { useBoard } from '@/life/hooks'
+import { useBoard } from '../life/hooks'
 import React, { VFC } from 'react'
 import GameBoard from './Board'
 import GameCell from './Cell'
 
-const BoardContainer: VFC = () => {
-  const board = useBoard(10, 30)
+export interface BoardContainerProps {
+  rows: number
+  columns: number
+}
+
+const BoardContainer: VFC<BoardContainerProps> = ({ rows, columns }) => {
+  const board = useBoard(rows, columns)
 
   return (
     <GameBoard board={board}>
