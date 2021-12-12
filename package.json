@@ -11,9 +11,9 @@
     "dist/"
   ],
   "scripts": {
-    "dev:run": "nodemon --watch src --ext ts,tsx --exec node --require ts-node/register --require tsconfig-paths/register --require dotenv/config src/index.ts",
+    "dev:run": "nodemon --watch src --ext ts,tsx --exec node --require ts-node/register src/index.ts",
     "dev": "concurrently npm:typecheck:watch npm:dev:run --raw",
-    "debug": "nodemon --watch src --ext ts,tsx --exec node --inspect-brk=0.0.0.0:9229 --require ts-node/register --require tsconfig-paths/register --require dotenv/config src/index.ts",
+    "debug": "nodemon --watch src --ext ts,tsx --exec node --inspect-brk=0.0.0.0:9229 --require ts-node/register src/index.ts",
     "prebuild": "rm -rf dist/",
     "build": "tsc -b",
     "start": "node --require tsconfig-paths/register dist/index.js",

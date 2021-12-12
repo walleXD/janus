@@ -25,10 +25,7 @@
     "noImplicitThis": true,
     "strictPropertyInitialization": true,
     "typeRoots": ["node_modules/@types/"],
-    "jsx": "react",
-    "paths": {
-      "@/*": ["./modules/*"]
-    }
+    "jsx": "react"
   },
   "ts-node": {
     "transpileOnly": true,
