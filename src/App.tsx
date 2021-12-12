@@ -22,7 +22,7 @@ const App: VFC = () => {
     <>
       <Static items={[1]}>
         {(_, i) => (
-          <Gradient name="rainbow" key={i}>
+          <Gradient name="cristal" key={i}>
             <BigText text="Janus" />
             <Text>A game of life</Text>
           </Gradient>
