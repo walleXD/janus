@@ -1,16 +1,20 @@
 import React, { VFC } from 'react'
-import { useInput, useApp, Text, Static } from 'ink'
-import BoardContainer from './modules/ui/BoardContainer'
-import HandleInputs from './modules/ui/HandleInputs'
+import { useInput, useApp, Text, Static, Box } from 'ink'
 import Gradient from 'ink-gradient'
 import BigText from 'ink-big-text'
+
+import BoardContainer from './modules/life/containers/BoardContainer'
+import HandleInputs from './modules/life/containers/HandleInputs'
 
 const App: VFC = () => {
   const { exit } = useApp()
 
+  // TODO: Add a cleaner exit method
   useInput((input) => {
     if (input === 'q') {
-      exit()
+      setTimeout(() => {
+        exit()
+      }, 5000)
     }
   })
 
@@ -25,7 +29,9 @@ const App: VFC = () => {
         )}
       </Static>
 
-      <HandleInputs>{(props) => <BoardContainer {...props} />}</HandleInputs>
+      <Box marginTop={2}>
+        <HandleInputs>{(props) => <BoardContainer {...props} />}</HandleInputs>
+      </Box>
     </>
   )
 }

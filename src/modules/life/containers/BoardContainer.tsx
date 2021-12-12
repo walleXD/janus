@@ -1,7 +1,8 @@
-import { useBoard } from '../life/hooks'
 import React, { VFC } from 'react'
-import GameBoard from './Board'
-import GameCell from './Cell'
+
+import GameBoard from '../components/Board'
+import GameCell from '../components/Cell'
+import { useBoard } from '../hooks'
 
 export interface BoardContainerProps {
   rows: number

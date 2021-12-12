@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Box } from 'ink'
 
-import { Board, Cell } from '../life/utils'
+import { Board, Cell } from '../utils'
 
 export interface BoardProps {
   board: Board

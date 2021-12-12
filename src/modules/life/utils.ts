@@ -1,7 +1,6 @@
-import { IO } from 'fp-ts/lib/IO'
 import Hashids from 'hashids'
 
-export const generateRandomLifeState: IO<boolean> = () => Math.random() > 0.5
+export const generateRandomLifeState = (): boolean => Math.random() > 0.5
 
 export interface Cell {
   id: string
