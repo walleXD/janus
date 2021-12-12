@@ -1,5 +1,10 @@
 # JANUS
 
-A very simple CLI implementation of game of life
+A very simple game of life in your terminal
 
-[![Screenshot](./imgs/screenshot.png)](Screenshot)
+[![Recording](./imgs/recording.gif)](Recording)
+
+## Tooling
+
+- Ink (React renderer for terminal)
+- Typescript
