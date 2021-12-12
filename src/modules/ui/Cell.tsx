@@ -1,14 +1,14 @@
 import React, { VFC, useMemo } from 'react'
 import { Text } from 'ink'
 
-export interface CellProps {
+export interface GameCellProps {
   alive?: boolean
 }
 
-const Cell: VFC<CellProps> = ({ alive }) => {
+const GameCell: VFC<GameCellProps> = ({ alive }) => {
   const isAlive = useMemo(() => alive !== undefined && alive, [alive])
 
   return <Text>{isAlive ? '🦠' : '💀'}</Text>
 }
 
-export default Cell
+export default GameCell

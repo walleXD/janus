@@ -1,5 +1,6 @@
 import { createElement } from 'react'
 import { render } from 'ink'
-import Board from '@/ui/Board'
 
-render(createElement(Board))
+import GameBoard from '@/ui/BoardContainer'
+
+render(createElement(GameBoard))
