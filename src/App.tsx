@@ -3,8 +3,7 @@ import { useInput, useApp, Text, Static, Box } from 'ink'
 import Gradient from 'ink-gradient'
 import BigText from 'ink-big-text'
 
-import BoardContainer from './modules/life/containers/BoardContainer'
-import HandleInputs from './modules/life/containers/HandleInputs'
+import { GameBoard, UserInput } from './modules/life'
 
 const App: VFC = () => {
   const { exit } = useApp()
@@ -30,7 +29,7 @@ const App: VFC = () => {
       </Static>
 
       <Box marginTop={2}>
-        <HandleInputs>{(props) => <BoardContainer {...props} />}</HandleInputs>
+        <UserInput>{(props) => <GameBoard {...props} />}</UserInput>
       </Box>
     </>
   )
