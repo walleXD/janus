@@ -41,7 +41,7 @@
     "@commitlint/config-lerna-scopes": "15.0.0",
     "@swc/core": "1.2.119",
     "@swc/helpers": "0.3.2",
-    "@swc/jest": "0.2.12",
+    "@swc/jest": "0.2.15",
     "@types/ink-big-text": "1.2.1",
     "@types/ink-box": "1.0.2",
     "@types/ink-gradient": "2.0.1",
