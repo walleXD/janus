@@ -39,7 +39,7 @@
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@commitlint/config-lerna-scopes": "15.0.0",
-    "@swc/core": "1.2.120",
+    "@swc/core": "1.2.121",
     "@swc/helpers": "0.3.2",
     "@swc/jest": "0.2.15",
     "@types/ink-big-text": "1.2.1",
